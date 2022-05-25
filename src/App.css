@@ -29,7 +29,7 @@
     font-weight: 700;
 }
 
-.app header .login-btn button{
+.app header .login-btn button, .app header .logout-btn button{
     background-color: #fe5454;
     color: #fff;
     width: 100px;
@@ -41,7 +41,7 @@
     cursor: pointer;
 }
 
-.app header .login-btn button:hover{
+.app header .login-btn button:hover, .app header .logout-btn button:hover{
     background: none;
     border: 2px solid #fe5454;
     color: #fe5454;

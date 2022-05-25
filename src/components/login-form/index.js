@@ -1,15 +1,22 @@
+import React,{useContext} from "react";
 import './login-form.styles.css';
 
 import { Formik } from "formik";
 import * as Yup from "yup";
 
+import {UserContext} from '../../App';
+
 const LoginForm = () => {
+
+    const {setCurrentUser} = useContext(UserContext);
+
     return(
         <Formik
             initialValues={{ email: "", password: "" }}
             onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-                console.log("Logging in", values);
+                setCurrentUser(values);
+                localStorage.setItem('currentUser', JSON.stringify(values));
                 setSubmitting(false);
             }, 500);
             }}
