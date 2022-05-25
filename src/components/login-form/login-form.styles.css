@@ -1,0 +1,78 @@
+.login-form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.login-form h2{
+    font-weight: 900;
+}
+
+.login-form .input-feedback{
+    color: #fe5454;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.login-form .input-feedback:first-letter{
+    text-transform: capitalize;
+}
+
+.login-form .input-feedback:last-child{
+    margin-bottom: 0;
+}
+
+.login-form label{
+    margin-top: 20px;
+}
+
+.login-form input{
+    width: 250px;
+    height: 52px;
+    border-radius: 14px;
+    border: 1px solid #f1f1f1;
+    background-color: #f7f7f7;
+    padding: 12px 16px;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-form input.error {
+    border-color: #fe5454;
+}
+
+.login-form input::placeholder { 
+    color: #8e8e8e;
+    opacity: 1; 
+}
+  
+.login-form input:-ms-input-placeholder { 
+    color: #8e8e8e;
+}
+  
+.login-form input::-ms-input-placeholder {
+    color: #8e8e8e;
+}
+
+.login-form button{
+    margin-top: 30px;
+    width: 250px;
+    height: 52px;
+    border-radius: 14px;
+    background-color: #fe5454;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-form button:disabled {
+    background: #dddddd;
+    cursor: not-allowed;
+}
