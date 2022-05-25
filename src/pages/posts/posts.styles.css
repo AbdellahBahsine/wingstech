@@ -1,0 +1,67 @@
+.posts-page{
+    background-color: #f1f1f1;
+    padding: 0 6%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts-page h1{
+    font-weight: 900;
+}
+
+.posts-page .posts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+    grid-gap: 15px;
+    margin: 20px 0;
+}
+
+.posts-page .post{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.6s;
+}
+
+.posts-page .post:hover{
+    transform: scale(1.01);
+    transition: transform 0.6s;
+}
+
+.posts-page .post .post__title{
+    margin-bottom: 15px;
+}
+
+.posts-page .post .post__body{
+    color: #8e8e8e;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fe5454;
+    border-color: #fe5454 transparent #fe5454 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

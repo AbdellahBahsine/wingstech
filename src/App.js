@@ -4,6 +4,7 @@ import { Routes, Route, Navigate, Link } from "react-router-dom";
 
 import HomePage from './pages/home';
 import LoginPage from './pages/login';
+import PostsPage from './pages/posts';
 
 export const UserContext = React.createContext();
 
@@ -12,7 +13,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    if(!localStorage.getItem('currentUser').length){
+    if(!localStorage.getItem('currentUser')){
       setCurrentUser(null)
     } else{
       const user = localStorage.getItem('currentUser')
@@ -54,9 +55,10 @@ function App() {
         </header>
 
         <Routes>
-          <Route path='/' element={<HomePage />} />
+        <Route path='*' element={<HomePage />} />
+          <Route exact path='/' element={<HomePage />} />
           <Route exact path='/login' element={currentUser ? <Navigate to="/posts" /> : <LoginPage />} />
-          <Route exact path='/posts' element={currentUser ? <Navigate to="/" /> : <HomePage />} />
+          <Route exact path='/posts' element={!currentUser ? <Navigate to="/login" /> : <PostsPage />} />
         </Routes>
       </div>
     </UserContext.Provider>
